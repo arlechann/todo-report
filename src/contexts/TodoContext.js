@@ -19,7 +19,7 @@ const defaultItem = {
   dueDate: '',
   isProductive: false,
   spentTimeMinutes: 0,
-  remarks: '',
+  comment: '',
 }
 
 const reducerAdd = (state, payload) => {
@@ -99,7 +99,7 @@ const reducerUpdateItem = property => {
 };
 
 const reducerUpdateProgress = reducerUpdateItem('progress');
-const reducerUpdateRemarks = reducerUpdateItem('remarks');
+const reducerUpdateComment = reducerUpdateItem('comment');
 const reducerUpdateSpentTimeMinutes = reducerUpdateItem('spentTimeMinutes');
 
 const reducerRestore = (state, payload) => {
@@ -131,8 +131,8 @@ const reducer = (state, action) => {
     case 'update progress':
       return reducerUpdateProgress(state, action.payload);
 
-    case 'update remarks':
-      return reducerUpdateRemarks(state, action.payload);
+    case 'update comment':
+      return reducerUpdateComment(state, action.payload);
 
     case 'update spent time':
       return reducerUpdateSpentTimeMinutes(state, action.payload);

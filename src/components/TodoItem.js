@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '2rem',
     width: 'auto',
     maxWidth: 600,
+    minWidth: 480,
   },
   moveBtn: {
     marginLeft: 'auto',
@@ -94,11 +95,12 @@ const TodoItem = ({ item, dispatch, disabled }) => {
             <TextField
               label="備考"
               type="text"
+              value={item.comment}
               InputLabelProps={{
                 shrink: true,
               }}
               onChange={
-                e => dispatch({ type: 'update remarks', payload: { id: item.id, remarks: e.target.value } })
+                e => dispatch({ type: 'update comment', payload: { id: item.id, comment: e.target.value } })
               }
               fullWidth
             />
