@@ -16,8 +16,8 @@ const TodoList = props => {
     <Grid container className={classes.container} spacing={3}>
       {order.map((id, index) => {
         return (
-          <Grid item xs>
-            <TodoItem key={id} item={{ ...props.items[id], order: index }} dispatch={props.dispatch} disabled={props.disabled} />
+          <Grid key={id} item xs>
+            <TodoItem item={{ ...props.items[id], order: index }} dispatch={props.dispatch} disabled={props.disabled} />
           </Grid>
         );
       })}
