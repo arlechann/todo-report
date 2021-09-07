@@ -94,6 +94,7 @@ const TodoItem = ({ item, dispatch, disabled }) => {
             <TextField
               label="備考"
               type="text"
+              value={item.remarks}
               InputLabelProps={{
                 shrink: true,
               }}
