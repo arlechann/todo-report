@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '2rem',
     width: 'auto',
     maxWidth: 600,
+    minWidth: 480,
   },
   moveBtn: {
     marginLeft: 'auto',
